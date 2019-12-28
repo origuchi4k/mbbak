@@ -20,7 +20,7 @@ spec:
             volumeMounts:
               - name: backup-vol
                 mountPath: /backup
-            environment:
+            env:
               - name: DB_HOST
                 value: my-db
               - name: DB_PASSWORD
