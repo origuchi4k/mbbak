@@ -6,7 +6,7 @@
 [ -z ${DB_HOST} ] && echo "Error: DB_HOST is invalid" && exit 1
 [ -z ${DB_PASSWORD} ] && echo "Error: DB_PASSWORD is invalid" && exit 1
 BACKUP_DIR=/backup/${DB_HOST}
-BACKUP_FILE=backup_${DB_NAME}_$(date +"%Y%m%d_%h%M%s").sql
+BACKUP_FILE=backup_${DB_NAME}_$(date +"%Y%m%d_%H%M%S").sql
 [ -d ${BACKUP_DIR} ] || mkdir -p ${BACKUP_DIR} || (echo "Error: Failed to create directory" && exit 1)
 
 if [ ${DB_NAME} = "all-databases" ]; then
